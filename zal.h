@@ -43,6 +43,15 @@ void afficherRueSavidanVide();
 };
 
 typedef struct tabzombi{
-	int tab[NBZOMBIS];
-	}
+	int tab[NBZOMBIS]
+};
+/**Specification:Nom de la function: aleatoireDescription:La fonction aleatoire retourne un entier généré de manière pseudo-aléatoire 
+compris entre 0 et la valeur de son paramètre limite (non inclus).
+Paramètre : int limite --la borne maximale non incluse pour la generation du Type de la constante retournée:int--compris entre0et49inclusContrainte: 
+Necessite l’inclusion des entêtes #include<time.h> 
+et #include<stdlib.h>
+Pour initialiser le générateur pseudo-aléatoire, il faut ajouter l’instruction srand(time(NULL));
+au début de la function main.Exemple d’utilisation: int retA = aleatoire(10);*/
+intaleatoire(int limite);
+
 #endif
