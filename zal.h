@@ -30,13 +30,13 @@ void afficherRiveDroite(int);
 void afficherRueSavidanVide();
 
 
- typedef struct heros {
+ struct heros {
     unsigned int posx;
     unsigned int posy;
     unsigned char name;
 };
 
- typedef struct zombi {
+ struct zombi {
     unsigned int zposx;
     unsigned int zposy;
     unsigned char zname;
