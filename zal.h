@@ -43,7 +43,7 @@ void afficherRueSavidanVide();
 };
 
 typedef struct tabzombi{
-	int tab[NBZOMBIS]
+	int tab[NBZOMBIS];
 };
 /**Specification:Nom de la function: aleatoire
 Description:La fonction aleatoire retourne un entier généré de manière pseudo-aléatoire 
