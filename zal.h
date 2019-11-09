@@ -83,7 +83,7 @@ LONGUEUR_RUE sont des constantes symboliques définies dans zal.h.
 */
 struct heros initialiserHeros();
 
-	/** 
+/** 
 Fonction qui initialise une nouvelle structure de type zombi.Un zombiest par défaut 
 positionné en haut de la rue Jean Savidan, posY = 0 et aléatoirement en X
 *@return Zombiune structure de type Zombi
