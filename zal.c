@@ -21,6 +21,6 @@ void afficherRueSavidanVide(){
     }
 }
 
-intaleatoire(int limite){
+int aleatoire(int limite){
     returnrand() %limite;
 }
