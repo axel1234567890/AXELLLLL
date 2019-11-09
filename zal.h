@@ -36,15 +36,14 @@ void afficherRueSavidanVide();
     unsigned char name;
 };
 
- struct zombi {
+typedef struct tabzombi{
+	int tab[NBZOMBIS];
+	 struct zombi {
     unsigned int zposx;
     unsigned int zposy;
     unsigned char zname;
 };
-
-typedef struct tabzombi{
-	int tab[NBZOMBIS];
-};
+	
 /**Specification:Nom de la function: aleatoire
 Description:La fonction aleatoire retourne un entier généré de manière pseudo-aléatoire 
 compris entre 0 et la valeur de son paramètre limite (non inclus).
