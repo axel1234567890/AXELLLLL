@@ -42,4 +42,7 @@ void afficherRueSavidanVide();
     unsigned char zname;
 };
 
+typedef struct tabzombi{
+	int tab[NBZOMBIS];
+	}
 #endif
