@@ -20,3 +20,7 @@ void afficherRueSavidanVide(){
         printf("\n");
     }
 }
+
+intaleatoire(int limite){
+    returnrand() %limite;
+}
