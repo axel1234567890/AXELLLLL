@@ -24,21 +24,13 @@ void afficherRueSavidanVide(){
 int aleatoire(int limite){
     return rand() %limite;
 }
-/** 
-Fonction qui initialise une nouvelle structure de type héros
-. Un héros est par défaut positionné en X à LARGEUR_RUE / 2 et à Y = LONGUEUR_RUE, où LARGEUR_RUE et 
-LONGUEUR_RUE sont des constantes symboliques définies dans zal.h.
-*@return Heros une structure de type Heros
-*/
+
 struct heros initialiserHeros(){
 	struct heros Jako = { LARGEUR_RUE/2, LONGUEUR_RUE, 'H' ,};
 	return Jako;
 	};
-/** 
-Fonction qui initialise une nouvelle structure de type zombi.Un zombiest par défaut 
-positionné en haut de la rue Jean Savidan, posY = 0 et aléatoirement en X
-*@return Zombiune structure de type Zombi
-*/
+
+
 struct zombi initialiserZombi(){
 	 int i = aleatoire(LARGEUR_RUE);
 	struct zombi Z1 = {i , 0, 'Z' ,};
