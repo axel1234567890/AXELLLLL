@@ -30,66 +30,98 @@ void afficherRiveDroite(int);
 void afficherRueSavidanVide();
 
 
-typedef struct heros {
-    unsigned int posx;
-    unsigned int posy;
-    unsigned char name;
-}Heros;
 
-typedef struct zombi {
-    unsigned int zposx;
-    unsigned int zposy;
-    unsigned char zname;
-}Zombi;
-	
+typedef struct  
+{  
+	int posx; 
+	int posy; 
+	int Vie; 
+} Heros ; 
 
-typedef struct tabzombi{
-	int tab[NBZOMBIS];
-	struct zombi;
-};
+Heros heros;
 
-struct zombi initialiserZombi();
+typedef struct  
+{ 
+	int zposx; 
+	int zposy; 
+} Zombi; 
 
-struct heros initialiserHeros();
-	
+Zombi zombi;
 
-/**Specification:Nom de la function: aleatoire
-Description:La fonction aleatoire retourne un entier généré de manière pseudo-aléatoire 
-compris entre 0 et la valeur de son paramètre limite (non inclus).
-Paramètre : int limite --la borne maximale non incluse pour la generation du 
-Type de la constante retournée: int--compris entre0et49inclus
-Contrainte: Necessite l’inclusion des entêtes #include<time.h> et #include<stdlib.h>
-Pour initialiser le générateur pseudo-aléatoire, il faut ajouter l’instruction srand(time(NULL));
-au début de la function main.
-Exemple d’utilisation: int retA = aleatoire(10);*/
+typedef Zombi tabzombis[NBZOMBIS];
+
+
+
+
+/**Specification :
+Nom de la fonction : aleatoire
+Description : La fonction aleatoire retourne un entier généré de manière pseudo-
+aléatoire compris entre 0 et la valeur de son paramètre limite(non inclus).
+Paramètre : int limite -- la borne maximale non incluse pour la generation du nombre.
+Type de la constante retournée : int -- compris entre 0 et 49 inclus
+Contraintes : Necessite l'inclusion des entêtes #include<time.h> et #include<stdlib.h>
+Pour initialiser le générateur pseudo-aléatoire, il faut ajouter l'instruction
+srand(time(NULL)); au début de la fonction main.
+Exemple d'utilisation : int retA = aleatoire(10);
+**/
+
 int aleatoire(int limite);
 
-void afficherPosH(struct heros);
-void afficherPosZ1(struct zombi);
-void afficherPosZ2(struct zombi);
-void afficherPosZ3(struct zombi);
-void afficherPosZ4(struct zombi);
-void afficherPosZ6(struct zombi);
-void afficherPosZ7(struct zombi);
-void afficherPosZ8(struct zombi);
-void afficherPosZ9(struct zombi);
-void afficherPosZ0(struct zombi);
 
-/** 
-Fonction qui initialise une nouvelle structure de type héros
-. Un héros est par défaut positionné en X à LARGEUR_RUE / 2 et à Y = LONGUEUR_RUE, où LARGEUR_RUE et 
-LONGUEUR_RUE sont des constantes symboliques définies dans zal.h.
+
+/** Fonction qui initialise une nouvelle structure de type héros. 
+ * Un hérosest par défaut positionné en X à LARGEUR_RUE / 2 et à Y = LONGUEUR_RUE, 
+ * où LARGEUR_RUE et LONGUEUR_RUE sont des constantes symboliques définies dans zal.h.
 *@return Heros une structure de type Heros
 */
-struct heros initialiserHeros();
+
+Heros initialiserHeros(); 
+
 
 /** 
-Fonction qui initialise une nouvelle structure de type zombi.Un zombiest par défaut 
-positionné en haut de la rue Jean Savidan, posY = 0 et aléatoirement en X
-*@return Zombiune structure de type Zombi
+Fonction qui initialise une nouvelle structure de type zombi. Un zombi est par défaut positionné 
+en haut de la rue Jean Savidan, posY = 0 et aléatoirement en X
+*@return Zombi une structure de type Zombi
+**/
+
+Zombi initialiserZombi();
+
+/** 
+Procédure qui initialise un tableau de zombis passé en paramètre. Ce tableau est de 
+type TabZombis et est directement modifié dans la procédure 
+*@param TabZombis un tableau de NBZOMBIS structures de type zombi
 */
-struct zombi initialiserZombi();
+
+void initialiserZombis(tabzombis zombis);
+
+/**Specification :
+Nom de la fonction : infoHeros
+Description: Procédure qui permet de visualiser les informations fournis sur le heros
+* elles sont : la position en X et la position Y des Zombis.
+Paramètres : Heros.posX ;Heros.posY ;
+*/
+
+void infoHeros(Heros heros);
 
 
+/**Specification :
+Nom de la fonction : infoZombiV2
+Description: Procédure qui permet de visualiser les informations fournis sur un zombi
+* elles sont : la position en X et la position Y des Zombis.
+Paramètres : Zombi.posX ; Zombi.posY ;
+* ((fonction utilisé dans infoZombiV2))
+*/
+
+void infoZombiV2(Zombi zombi);
+
+/**Specification :
+Nom de la fonction : infoZombiAll
+Description: Procédure qui permet de visualiser les informations fournis sur les zombis
+* elles sont : la position en X et la position Y des Zombis.
+Paramètres : Zombi.posX ; Zombi.posY ;
+*/
+
+void infoZombiAll(tabzombis zombis);
 
 #endif
+	
